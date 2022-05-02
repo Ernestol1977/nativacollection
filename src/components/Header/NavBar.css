@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Oleo+Script+Swash+Caps&family=Pacifico&family=Square+Peg&family=Tapestry&family=Yanone+Kaffeesatz&display=swap');
+
+/* font-family: 'Tapestry', cursive; */
+/* font-family: 'Dancing Script', cursive; */
+/* font-family: 'Pacifico', cursive; */
+/* font-family: 'Square Peg', cursive; */
+
+/* font-family: 'Oleo Script Swash Caps', cursive - Title */
+/* font-family: 'Yanone Kaffeesatz', sans-serif; - navbar*/
+
+.title {
+    letter-spacing: 10px;
+    font-size: 3em;
+    color: rgb(70, 67, 63);
+    font-family: 'Oleo Script Swash Caps', cursive;
+    text-shadow: 0 0 5px #fff;
+}
+
+.navbar{
+    font-size: 1.2em;
+    font-weight: bold;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    letter-spacing: 0.1em;
+}
+
+a:hover {
+    color: #fff !important;
+    color: rgb(70, 67, 63);
+    text-shadow: 0 0 5px red;
+    font-size: 1.4em;
+}
