@@ -1,5 +1,9 @@
 
-import { Container, Nav, Navbar } from "react-bootstrap"
+import Container from "react-bootstrap/Container"
+import  Nav  from "react-bootstrap/Nav"
+import   Navbar  from "react-bootstrap/Navbar"
+
+import CartWidget from "../CartWidget/CartWidget"
 
 import './NavBar.css'
 
@@ -23,6 +27,7 @@ const NavBar = () => {
                                     <Nav.Link href="#bombachas" className="navbar">Bombachas</Nav.Link>
                                 </Nav>
                             </Navbar.Collapse>
+                        <CartWidget />
                         </Container>
                     </Navbar>
                 </div>
