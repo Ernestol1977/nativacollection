@@ -11,7 +11,7 @@ function ItemCount({ stock, initial, onAdd }) {
         if (count < stock) {
             setCount(count + 1);
         } else {
-            alert("no hay más stock de dicho prooducto")
+            alert("no hay más stock de este producto")
         }
     }
 
@@ -27,8 +27,8 @@ function ItemCount({ stock, initial, onAdd }) {
     return (
         <div className="contadorTodo mx-auto">
 
+            <button className="boton m-3" onClick={contadorMas}><FaPlus /></button>
             <p className="numero">{count}</p>
-            <button className="boton" onClick={contadorMas}><FaPlus /></button><br/>
             <button className="boton" onClick={contadorMenos}><FaMinus /></button>
 
 

@@ -15,7 +15,7 @@ const NavBar = () => {
             </div>
             <div>
                 <div>
-                    <Navbar expand="sm" navbar-center>
+                    <Navbar expand="sm">
                         <Container fluid>
                             <Navbar.Brand href="#"></Navbar.Brand>
                             <Navbar.Toggle aria-controls="navbarScroll" />

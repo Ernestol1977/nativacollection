@@ -1,6 +1,5 @@
-import NavBar from './components/Header/NavBar'
+import NavBar from './components/NavBar/NavBar'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
-import ItemCount from './components/ItemCount/ItemCount'
 
 import './App.css'
 import 'bootstrap/dist/css/bootstrap.min.css'
@@ -16,9 +15,9 @@ function App() {
         <div className="App">
             <NavBar />
             <ItemListContainer saludo={'Bienvenidos al mundo de Nativa Collection'} />
-            <div>
+            {/* <div>
                 <ItemCount stock={5} initial={1} onAdd={cart} />
-            </div>
+            </div> */}
         </div>
     )
 }

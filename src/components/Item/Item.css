@@ -1,0 +1,43 @@
+.item {
+    width: 25em;
+    height: 25em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5em;
+    background-color: brown;
+    border-radius: 20px;
+}
+
+.item__img{
+    width: auto;
+    height: 40%;
+    margin-top: 2em;
+}
+
+.item__info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.item__title {
+    width: 50%;
+    text-align: center;
+    font-size: 18px;
+    font-family: sans-serif;
+    color: #fff;
+    margin-bottom: 0%;
+
+}
+
+.item__price{
+    width: 50%;
+    border-left: 1px #fff solid;
+    text-align: center;
+    font-size: 18px;
+    font-family: sans-serif;
+    color: #fff;
+    margin-bottom: 0%;
+}
