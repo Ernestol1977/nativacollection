@@ -45,6 +45,6 @@ body {
   background-image: url("./components/img/playa3.jpg");
 
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
 
 }

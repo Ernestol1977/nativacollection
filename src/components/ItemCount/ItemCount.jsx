@@ -26,15 +26,14 @@ function ItemCount({ stock, initial, onAdd }) {
 
     return (
         <div className="contadorTodo mx-auto">
-
-            <button className="boton m-3" onClick={contadorMas}><FaPlus /></button>
-            <p className="numero">{count}</p>
-            <button className="boton" onClick={contadorMenos}><FaMinus /></button>
-
-
-            <span className="botonCarrito">
-            <button className="botonSumarCarrito m-4" onClick={() => onAdd(count)}>AGREGAR AL CARRITO</button>
-            </span>
+            <div className="contador">
+                <button className="boton " onClick={contadorMas}><FaPlus /></button>
+                <p className="numero">{count}</p>
+                <button className="boton" onClick={contadorMenos}><FaMinus /></button>
+            </div>
+            <div className="botonCarrito">
+                <button className="botonSumarCarrito m-4" onClick={() => onAdd(count)}>AGREGAR AL CARRITO</button>
+            </div>
         </div>
     )
 }

@@ -1,5 +1,5 @@
 import ItemCount from '../ItemCount/ItemCount'
-// import "./Item.css"
+import "./Item.css"
 
 function Item({name, price, stock, img}) {
     function cart(count) {
@@ -11,7 +11,7 @@ function Item({name, price, stock, img}) {
             <img className="item__img" src={img} alt="" />
             <div className='item__info'>
                 <h3 className="item__title">{name}</h3>
-                <p className='item__price'>{`Precio: ${price}`}</p>
+                <p className='item__price'>{`Precio: $${price}`}</p>
             </div>
             <ItemCount initial={1} stock={stock} onAdd={(cart)} />
         </div>

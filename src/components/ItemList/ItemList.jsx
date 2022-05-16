@@ -26,9 +26,9 @@ const ItemList = () => {
     return (
         <div className="product-list-container">
             {loading ?
-                <div>
-                    <img src={Loading} />
-                    <h2 className="cargando">Cargando datos...</h2>
+                <div className="cargando container">
+                    <img className="w-100" src={Loading} />
+                    <h2>Cargando datos...</h2>
                 </div>
                 :
                 products.map((product) => {

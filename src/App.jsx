@@ -15,9 +15,6 @@ function App() {
         <div className="App">
             <NavBar />
             <ItemListContainer saludo={'Bienvenidos al mundo de Nativa Collection'} />
-            {/* <div>
-                <ItemCount stock={5} initial={1} onAdd={cart} />
-            </div> */}
         </div>
     )
 }
