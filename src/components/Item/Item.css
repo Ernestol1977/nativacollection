@@ -2,17 +2,15 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5em;  
     border-radius: 20px;
 }
 
-.item__img{
-    width: auto;
-    height:10%;
-    margin-top: 2em;
+.itemImg{
+    height:100%;
+    margin: 1em;
 }
 
-.item__info{
+.itemInfo{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -20,7 +18,7 @@
     margin-top: 1em;
 }
 
-.item__title {
+.itemTitle {
     width: 50%;
     text-align: center;
     font-size: 18px;
@@ -30,7 +28,7 @@
 
 }
 
-.item__price{
+.itemPrice{
     width: 50%;
     border-left: 2px rgb(238, 0, 0) solid;
     text-align: center;

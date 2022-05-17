@@ -8,10 +8,10 @@ function Item({name, price, stock, img}) {
 
     return (
         <div className="item">
-            <img className="item__img" src={img} alt="" />
-            <div className='item__info'>
-                <h3 className="item__title">{name}</h3>
-                <p className='item__price'>{`Precio: $${price}`}</p>
+            <img className="itemImg" src={img} alt="" />
+            <div className='itemInfo'>
+                <h3 className="itemTitle">{name}</h3>
+                <p className='itemPrice'>{`Precio: $${price}`}</p>
             </div>
             <ItemCount initial={1} stock={stock} onAdd={(cart)} />
         </div>
