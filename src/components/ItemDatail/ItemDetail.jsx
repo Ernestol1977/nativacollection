@@ -1,24 +1,17 @@
-import { productsList } from "../../Data/data"
-// import Spinner from 'react-bootstrap/Spinner'
+// import { productsList } from "../../Data/data";
+// import Spinner from "react-bootstrap/Spinner";
 
-const ItemDetail = ({product}) => {
-    return (
-        <div className="itemDetail">
+const ItemDetail = ({ img, name, price, detail }) => {
+  return (
+    <div className="itemDetail">
+      <div className="detailPhoto">
+        <img src={img} alt="" />
+      </div>
+      <div className="detailName">{name}</div>
+      <div className="detailPrice">${price}</div>
+      <div className="detailDetail">{detail}</div>
+    </div>
+  );
+};
 
-            <div className="detailPhoto">
-                img={product.img}
-            </div>
-            <div className='detailName'>
-                name={product.name}
-            </div>
-            <div className='detailPrice'>
-                price={product.price}
-            </div>
-            <div className='detailDetail'>
-                price={product.detail}
-            </div>
-        </div>
-    )
-}
-
-export default ItemDetail
+export default ItemDetail;

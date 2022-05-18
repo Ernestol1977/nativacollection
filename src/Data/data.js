@@ -1,5 +1,4 @@
-const productsList = [
-    {
+export const productsList = [{
         id: "001",
         category: "Corpiño",
         name: "Summer 1",
