@@ -1,11 +1,13 @@
 import { productsList } from "../../Data/data";
 import Item from "../Item/Item";
-// import Loading from "../img/cargando-loading-039.gif";
-import "./ItemList.css";
 
-const ItemList = () => {
-  return productsList.map((product) => (
-    <Item key={product.id} product={product} />
-  ));
+// import "./ItemList.css";
+
+const ItemList = ({productsList}) => {
+
+  return( <>{productsList.map((product) => (
+    <Item key={product.id} name={product.name} img={product.img} id={product.id} stock={product.stock} price={product.price} />
+  ))}</>);
 };
+
 export default ItemList;

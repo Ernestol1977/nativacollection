@@ -1,6 +1,6 @@
 export const productsList = [{
         id: "001",
-        category: "Corpiño",
+        category: "corpiños",
         name: "Summer 1",
         detail: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis voluptatem dolor debitis beatae, ipsa earum.",
         price: 800,
@@ -9,7 +9,7 @@ export const productsList = [{
     },
     {
         id: "002",
-        category: "Corpiño",
+        category: "corpiños",
         name: "Summer 2",
         detail: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis voluptatem dolor debitis beatae, ipsa earum.",
         price: 849,
@@ -18,7 +18,7 @@ export const productsList = [{
     },
     {
         id: "003",
-        category: "Corpiño",
+        category: "corpiños",
         name: "Summer 3",
         detail: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis voluptatem dolor debitis beatae, ipsa earum.",
         price: 870,
@@ -27,7 +27,7 @@ export const productsList = [{
     },
     {
         id: "004",
-        category: "Corpiño",
+        category: "corpiños",
         name: "Summer 4",
         detail: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis voluptatem dolor debitis beatae, ipsa earum.",
         price: 900,
@@ -36,7 +36,7 @@ export const productsList = [{
     },
     {
         id: "005",
-        category: "Corpiño",
+        category: "corpiños",
         name: "Summer 5",
         detail: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis voluptatem dolor debitis beatae, ipsa earum.",
         price: 910,
@@ -45,7 +45,7 @@ export const productsList = [{
     },
     {
         id: "006",
-        category: "Bombacha",
+        category: "bombachas",
         name: "Spring 1",
         detail: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis voluptatem dolor debitis beatae, ipsa earum.",
         price: 400,
@@ -54,7 +54,7 @@ export const productsList = [{
     },
     {
         id: "007",
-        category: "Bombacha",
+        category: "bombachas",
         name: "Spring 2",
         detail: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis voluptatem dolor debitis beatae, ipsa earum.",
         price: 410,
@@ -63,7 +63,7 @@ export const productsList = [{
     },
     {
         id: "008",
-        category: "Bombacha",
+        category: "bombachas",
         name: "Spring 3",
         detail: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis voluptatem dolor debitis beatae, ipsa earum.",
         price: 449,
@@ -72,7 +72,7 @@ export const productsList = [{
     },
     {
         id: "009",
-        category: "Bombacha",
+        category: "bombachas",
         name: "Spring 4",
         detail: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis voluptatem dolor debitis beatae, ipsa earum.",
         price: 460,
@@ -81,7 +81,7 @@ export const productsList = [{
     },
     {
         id: "010",
-        category: "Bombacha",
+        category: "bombachas",
         name: "Spring 5",
         detail: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis voluptatem dolor debitis beatae, ipsa earum.",
         price: 470,

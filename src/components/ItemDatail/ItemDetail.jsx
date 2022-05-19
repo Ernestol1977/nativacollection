@@ -1,7 +1,13 @@
 // import { productsList } from "../../Data/data";
 // import Spinner from "react-bootstrap/Spinner";
 
+import { cartContext } from "../../context/cartContext";
+import ItemCount from "../ItemCount/ItemCount";
+
 const ItemDetail = ({ img, name, price, detail }) => {
+
+    // const {addToCart} = useContext(cartContext)
+
   return (
     <div className="itemDetail">
       <div className="detailPhoto">

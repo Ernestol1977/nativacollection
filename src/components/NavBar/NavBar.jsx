@@ -1,7 +1,8 @@
 
 import Container from "react-bootstrap/Container"
-import  Nav  from "react-bootstrap/Nav"
-import   Navbar  from "react-bootstrap/Navbar"
+import Nav from "react-bootstrap/Nav"
+import Navbar from "react-bootstrap/Navbar"
+import { Link } from "react-router-dom";
 
 import CartWidget from "../CartWidget/CartWidget"
 
@@ -21,10 +22,10 @@ const NavBar = () => {
                             <Navbar.Toggle aria-controls="navbarScroll" />
                             <Navbar.Collapse id="navbarScroll">
                                 <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '100px' }} navbarScroll>
-                                    <Nav.Link href="#" className="navbar">Home</Nav.Link>
-                                    <Nav.Link  href="#laMarca" className="navbar">La marca</Nav.Link>
-                                    <Nav.Link href="#corpinos" className="navbar">Corpiños</Nav.Link>
-                                    <Nav.Link href="#bombachas" className="navbar">Bombachas</Nav.Link>
+                                    <Link to={`/tienda`} className="navbar">Home</Link>
+                                    <Link to={`/tienda/corpiños`} className="navbar">Corpiños</Link>
+                                    <Link to={`/tienda/bombachas`} className="navbar">Bombachas</Link>
+                                    <Link to={`/tienda/marca`}className="navbar">La marca</Link>
                                 </Nav>
                             </Navbar.Collapse>
                         <CartWidget />

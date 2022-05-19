@@ -17,6 +17,8 @@ import ItemDetail from "../ItemDatail/ItemDetail";
 function ItemDetailContainer() {
   const [product, setProduct] = useState({});
 
+  const { detalleId } = useParams();
+
   const promesa = new Promise((resolve) => {
     setTimeout(() => {
       resolve(productsList);
@@ -25,7 +27,7 @@ function ItemDetailContainer() {
 
   useEffect(() => {
     promesa.then((respuesta) => {
-      setProduct(respuesta.find((product) => product.id === "002"));
+      setProduct(respuesta.find((product) => product.id === detalleId ));
     });
   }, []);
 
