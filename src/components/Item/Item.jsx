@@ -1,13 +1,8 @@
 import { Link } from "react-router-dom";
-import ItemCount from "../ItemCount/ItemCount";
-// import "./Item.css";
+import "./Item.css";
 
 function Item({ name, id, img, price, stock }) {
-  function cart(count) {
-    alert(`${count} items agregados al carrito`);
-  }
 
-  console.log(name)
   return (
     <div className="item">
       <Link to={`/detalle/${id}`}>
@@ -15,9 +10,13 @@ function Item({ name, id, img, price, stock }) {
         <div className="itemInfo">
           <h3 className="itemTitle">{name}</h3>
           <p className="itemPrice">{`Precio: $${price}`}</p>
+          <p className="itemStock">{`Quedan ${stock}`}</p>
         </div>
       </Link>
-      <ItemCount initial={1} stock={stock} onAdd={cart} />
+     
+      <Link to={`/detalle/${id}`}>
+        <button className="btn btn-outline-primary btn-block">Detalle del Producto</button>
+      </Link>
     </div>
   );
 }

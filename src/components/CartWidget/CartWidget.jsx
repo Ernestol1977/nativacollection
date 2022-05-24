@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import logo from '../img/cartWidget.svg'
 import './CartWidget.css'
 
@@ -5,7 +6,9 @@ const CartWidget = () => {
 
     return (
         <>
-            <img src={ logo } alt="imagen" />
+            <Link to='/cart' >
+                <img src={ logo } alt="imagen" />
+            </Link>
         </>
     )
 }

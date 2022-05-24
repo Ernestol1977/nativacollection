@@ -33,27 +33,21 @@ function ItemDetailContainer() {
 
   return (
     <div>
-      <Link className="buttonVolver" to="/tienda">
-        <span>VOLVER</span>
-      </Link>
       <ItemDetail
         name={product.name}
         id={product.id}
         price={product.price}
         detail={product.detail}
         img={product.img}
+        stock={product.stock}
+        
       />
+      <Link className="buttonVolver" to="/tienda">
+        <span>VOLVER</span>
+      </Link>
     </div>
   );
 }
 
 export default ItemDetailContainer;
 
-//   return (
-//     <div>
-//       <ItemDetail product={product} />
-//     </div>
-//   );
-// };
-
-// export default ItemDetailContainer;

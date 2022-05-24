@@ -23,9 +23,9 @@ const NavBar = () => {
                             <Navbar.Collapse id="navbarScroll">
                                 <Nav className="me-auto my-2 my-lg-0" style={{ maxHeight: '100px' }} navbarScroll>
                                     <Link to={`/tienda`} className="navbar">Home</Link>
-                                    <Link to={`/tienda/corpiños`} className="navbar">Corpiños</Link>
-                                    <Link to={`/tienda/bombachas`} className="navbar">Bombachas</Link>
-                                    <Link to={`/tienda/marca`}className="navbar">La marca</Link>
+                                    <Link to={`/categoria/corpiños`} className="navbar">Corpiños</Link>
+                                    <Link to={`/categoria/bombachas`} className="navbar">Bombachas</Link>
+                                    <Link to={`/lamarca`}className="navbar">La marca</Link>
                                 </Nav>
                             </Navbar.Collapse>
                         <CartWidget />
