@@ -34,12 +34,13 @@ function ItemDetailContainer() {
   return (
     <div>
       <ItemDetail
-        name={product.name}
-        id={product.id}
-        price={product.price}
-        detail={product.detail}
-        img={product.img}
-        stock={product.stock}
+        product = {product}
+        // name={product.name}
+        // id={product.id}
+        // price={product.price}
+        // detail={product.detail}
+        // img={product.img}
+        // stock={product.stock}
         
       />
       <Link className="buttonVolver" to="/tienda">

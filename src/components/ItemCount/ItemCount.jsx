@@ -3,7 +3,7 @@ import { FaPlus, FaMinus } from 'react-icons/fa'
 
 import './ItemCount.css'
 
-function ItemCount({ stock, initial, onAdd, handleInter }) {
+function ItemCount({ stock, initial, onAdd }) {
 
     const [count, setCount] = useState(initial)
 
@@ -23,10 +23,10 @@ function ItemCount({ stock, initial, onAdd, handleInter }) {
         }
     }
 
-    function addToCart() {
-        onAdd;
-        handleInter();
-    }
+    // function addToCart() {
+    //     onAdd;
+    //     handleInter();
+    // }
 
     return (
         <div className="contadorTodo mx-auto">
@@ -37,7 +37,7 @@ function ItemCount({ stock, initial, onAdd, handleInter }) {
             </div>
             <div className="botonCarrito">
               {/* <AgregarCarrito /> */}
-              <button onClick={addToCart} className="botonSumarCarrito m-4">Agregar al carrito</button>
+              <button onClick={() => onAdd(count)} className="botonSumarCarrito m-4">Agregar al carrito</button>
             </div>
         </div>
     )

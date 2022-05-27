@@ -1,28 +1,56 @@
-import { createContext, useState } from 'react'
+import { createContext, useContext, useState } from 'react'
 
-export const cartContext = createContext([]);
+const CartContext = createContext([]);
+
+export const useCartContext = () => useContext(CartContext)
 
 //Esto es un componente
-const CartContextProvider = ({ children }) => {
-
+const cartContextProvider = ({ children }) => {
+//Estados y funciones globales
 
   const [cartList, setCartList] = useState([])
 
   function addToCart(item) {
-    setCartList([
-      ...cartList,+
-      item])
+    const index = cartList.findIndex((product) => product.id === item.id)
+    if (index !== -1) {
+      const cantOld = cartList[index].quantity    
+      cartList[index].quantity += cantOld
+      setCartList([...cartList])
+    } else {
+      setCartList([
+        ...cartList,
+        item])
+    }
+  }
 
+  const removeItem = (id) =>{
+    setCartList(cartList.filter(prod => prod.id !== id))
+  } 
+
+  const cantidadTotal = () => {
+    return cartList.reduce((contador, prod) => contador += prod.quantity ,0)
+  }
+
+  const totalPrice = () => {
+    return cartList.reduce((contador, prod) => contador += (prod.quantity * prod.price) ,0)
+  }
+
+  const vaciarCarrito = () => {
+    setCartList([])
   }
 
   return (
-    <cartContext.Provider value={{
+    <CartContext.Provider value={{
       cartList,
-      addToCart
+      addToCart,
+      vaciarCarrito,
+      removeItem,
+      cantidadTotal,
+      totalPrice
     }}>
-      {children}
-    </cartContext.Provider>
+      { children }
+    </CartContext.Provider>
   )
 }
 
-export default CartContextProvider
+export default cartContextProvider
