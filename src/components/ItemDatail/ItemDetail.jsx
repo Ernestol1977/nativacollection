@@ -20,7 +20,7 @@ const ItemDetail = ({ product, onAdd }) => {
     handleInter()
   }
 
-  // console.log(cartList)
+  console.log(cartList)
 
   return (
     <div className="itemDetail">
