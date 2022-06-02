@@ -10,7 +10,8 @@ const Cart = () => {
     <div>
       {cartList.map(product => <div key={product.id}>
           <li>
-            {product.photo} {product.name} - Precio: {product.price} - Cantidad: {product.quantity}
+            <img src={product.photo} alt="" />
+            {product.name} - Precio: {product.price} - Cantidad: {product.quantity}
           </li>
           <button className="btn btn-outline-danger" onClick={() => removeItem(product.id)}><IoIosCloseCircle/></button>
         </div>)}

@@ -22,7 +22,7 @@ function App() {
           <Routes>
             <Route path="/" element={<ItemListContainer saludo={"Bienvenidos al mundo de Nativa Collection. A la brevedad se reestablecerá la página"} />} />
             <Route path="/categoria/:category" element={<ItemListContainer />} />
-            <Route path="/detalle/:detalleId" element={<ItemDetailContainer />} />
+            <Route path="/detalle/:detailId" element={<ItemDetailContainer />} />
             <Route path="/cart" element={<Cart />} />
 
             <Route path="/*" element={<Navigate to="/" replace />} />

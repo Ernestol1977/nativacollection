@@ -20,16 +20,16 @@ const ItemDetail = ({ product, onAdd }) => {
     handleInter()
   }
 
-  console.log(cartList)
+  // console.log(cartList)
 
   return (
     <div className="itemDetail">
       <div className="detailPhoto">
-        <img src={product.img} alt="" />
+        <img src={product.photo} alt="" />
       </div>
       <div className="detailName">{product.name}</div>
       <div className="detailPrice">${product.price}</div>
-      <div className="detailDetail">{product.detail}</div>
+      <div className="detailDetail">{product.description}</div>
       <div>
         {
           inputType === 'button' ? 
