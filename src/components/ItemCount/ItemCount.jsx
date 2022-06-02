@@ -23,11 +23,6 @@ function ItemCount({ stock, initial, onAdd }) {
         }
     }
 
-    // function addToCart() {
-    //     onAdd;
-    //     handleInter();
-    // }
-
     return (
         <div className="contadorTodo mx-auto">
             <div className="contador">

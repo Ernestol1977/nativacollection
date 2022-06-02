@@ -31,7 +31,6 @@ const ItemDetail = ({ product, onAdd }) => {
       <div className="detailPrice">${product.price}</div>
       <div className="detailDetail">{product.detail}</div>
       <div>
-        {/* <button onClick={onAdd}>Agregar carrito</button> */}
         {
           inputType === 'button' ? 
             <ItemCount initial={1} stock={product.stock} onAdd={onAdd} handleInter={handleInter} />
