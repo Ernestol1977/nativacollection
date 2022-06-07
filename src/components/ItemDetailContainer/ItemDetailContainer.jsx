@@ -5,16 +5,6 @@ import { productsList } from "../../Data/data";
 
 import ItemDetail from "../ItemDatail/ItemDetail";
 
-// const ItemDetailContainer = () => {
-//   const [product, setProduct] = useState({});
-//   // const { detailId } = useParams();
-
-//   useEffect(() => {
-//     getFetch(detailId)
-//       .then((response) => setProduct(response))
-//       .catch((err) => console.log(err));
-//   }, []);
-
 function ItemDetailContainer() {
   const [product, setProduct] = useState({});
 
