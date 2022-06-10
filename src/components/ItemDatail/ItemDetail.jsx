@@ -29,7 +29,7 @@ const ItemDetail = ({ product, onAdd }) => {
       </div>
       <div className="detailName">{product.name}</div>
       <div className="detailPrice">${product.price}</div>
-      <div className="detailDetail">{product.description}</div>
+      <div className="detailDetail">{product.detail}</div>
       <div>
         {
           inputType === 'button' ? 

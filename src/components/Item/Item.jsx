@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 import "./Item.css";
 
-function Item({ name, id, img, price, stock }) {
+function Item({ name, id, photo, price, stock }) {
 
   return (
     <div className="item">
       <Link to={`/detalle/${id}`}>
-        <img className="itemImg" src={img} alt="" />
+        <img className="itemImg" src={photo} alt="" />
         <div className="itemInfo">
           <h3 className="itemTitle">{name}</h3>
           <p className="itemPrice">{`Precio: $${price}`}</p>

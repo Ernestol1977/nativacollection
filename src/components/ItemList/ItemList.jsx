@@ -1,4 +1,3 @@
-import { productsList } from "../../Data/data";
 import Item from "../Item/Item";
 
 // import "./ItemList.css";
@@ -6,7 +5,7 @@ import Item from "../Item/Item";
 const ItemList = ({productsList}) => {
 
   return( <>{productsList.map((product) => (
-    <Item key={product.id} name={product.name} img={product.photo} id={product.id} stock={product.stock} price={product.price} />
+    <Item key={product.id} name={product.name} photo={product.photo} id={product.id} stock={product.stock} price={product.price} />
   ))}</>);
 };
 

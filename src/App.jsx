@@ -5,6 +5,7 @@ import ItemListContainer from "./components/ItemListContainer/ItemListContainer"
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import CartContextProvider from "./context/CartContext";
 import Cart from "./components/Cart/Cart";
+import { addDoc, collection, getFirestore } from "firebase/firestore";
 
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -29,6 +30,7 @@ function App() {
           </Routes>
         </div>
       </CartContextProvider>
+      {/* <button onClick={ProductFb}>cargar</button> */}
     </BrowserRouter>
   );
 }

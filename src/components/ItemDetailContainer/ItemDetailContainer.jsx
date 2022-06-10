@@ -19,7 +19,7 @@ function ItemDetailContainer() {
   useEffect(() => {
     const db = getFirestore()
 
-    const dbQuery = doc(db, 'Products', detailId)
+    const dbQuery = doc(db, 'products', detailId)
     
     getDoc(dbQuery)
       .then(resp => setProduct( { id:resp.id, ...resp.data() } ) )

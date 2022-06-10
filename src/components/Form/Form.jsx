@@ -1,48 +1,76 @@
+import { Button, Col, Form, FormGroup, FormLabel, FormSelect, Row } from "react-bootstrap";
+import { useCartContext } from "../../context/CartContext";
 
-<Form>
-  <Row>
-    <Col>
-      <Form.Control placeholder="First name" />
-    </Col>
-    <Col>
-      <Form.Control placeholder="Last name" />
-    </Col>
-  </Row>
 
-  <Row className="mb-3">
-    <Form.Group controlId="formGridEmail">
-      <Form.Label>Email</Form.Label>
-      <Form.Control type="email" placeholder="Enter email" />
-    </Form.Group>
-  </Row>
+const Forms = ()=> {
 
-  <Form.Group className="mb-3" controlId="formGridAddress1">
-    <Form.Label>Address</Form.Label>
-    <Form.Control placeholder="1234 Main St" />
-  </Form.Group>
+  const {purchaseOrder} = useCartContext()
 
-  <Row className="mb-3">
-    <Form.Group as={Col} controlId="formGridCity">
-      <Form.Label>City</Form.Label>
-      <Form.Control />
-    </Form.Group>
+  return (
+    <Form>
+      <Row>
+        <Col>
+          <input id="firstName" placeholder="Nombre completo" />
+        </Col>
+        <Col>
+          <input id="lastName" placeholder="Apellido" />
+        </Col>
+      </Row>
 
-    <Form.Group as={Col} controlId="formGridState">
-      <Form.Label>State</Form.Label>
-      <Form.Select defaultValue="Choose...">
-        <option>Choose...</option>
-        <option>...</option>
-      </Form.Select>
-    </Form.Group>
+      <Row className="mb-3">
+        <FormGroup controlId="formGridEmail">
+          <FormLabel></FormLabel>
+          <input id="email" type="email" placeholder="Ingrese email..." />
+        </FormGroup>
 
-    <Form.Group as={Col} controlId="formGridZip">
-      <Form.Label>Zip</Form.Label>
-      <Form.Control />
-    </Form.Group>
-  </Row>
+        <FormGroup controlId="formGridEmail">
+          <FormLabel></FormLabel>
+          <input id="email" type="email" placeholder="Valide su email..." />
+        </FormGroup>
+      </Row>
 
-  <Button variant="primary" type="submit">
-    Enviar
-  </Button>
-</Form>
+      <FormGroup className="mb-3" controlId="formGridAddress">
+        <FormLabel>Dirección</FormLabel>
+        <input id="address" placeholder="San Juan 1234" />
+      </FormGroup>
 
+      <FormGroup className="mb-3" controlId="cellPhone">
+        <FormLabel>Celular</FormLabel>
+        <input id="cellPhone" placeholder="ingrese su celular" />
+      </FormGroup>
+
+      <Row className="mb-3">
+        <FormGroup as={Col} controlId="formGridCity">
+          <FormLabel>Ciudad</FormLabel>
+          <input id="city" />
+        </FormGroup>
+
+        <FormGroup as={Col} controlId="formGridZip">
+          <FormLabel>CP</FormLabel>
+          <input id="zip"/>
+        </FormGroup>
+
+        <FormGroup as={Col} controlId="formGridState">
+          <FormLabel>País</FormLabel>
+          <FormSelect defaultValue="Argentina">
+            <option>Argentina</option>
+            <option>Uruguay</option>
+            <option>Chile</option>
+            <option>Brasil</option>
+            <option>Paraguay</option>
+            <option>Perú</option>
+          </FormSelect>
+        </FormGroup>
+
+      </Row>
+
+      <Button variant="primary" onClick={(e) => purchaseOrder(e)}>
+        Generar Orden
+      </Button>
+    </Form>
+  )
+}
+
+
+
+export default Forms
