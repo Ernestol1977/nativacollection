@@ -17,6 +17,7 @@ const cartContextProvider = ({ children }) => {
     const dbQuery = doc(db, "products", id)
     getDoc(dbQuery)
       .then(resp => setProduct({ id: resp.id, ...resp.data() }))
+  console.log(findProduct)
   }
 
 
