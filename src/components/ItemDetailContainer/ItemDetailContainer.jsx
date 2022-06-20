@@ -1,7 +1,6 @@
 import { doc, getDoc, getFirestore } from "firebase/firestore";
 import { useEffect, useState } from "react";
-import { Link, useParams } from "react-router-dom";
-import { productsList } from "../../Data/data";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 import ItemDetail from "../ItemDatail/ItemDetail";
 
@@ -9,30 +8,28 @@ function ItemDetailContainer() {
   const [product, setProduct] = useState({});
 
   const { detailId } = useParams();
-
-  const promesa = new Promise((resolve) => {
-    setTimeout(() => {
-      resolve(productsList);
-    }, 2000);
-  });
+  const idNotFound = useNavigate();
 
   useEffect(() => {
     const db = getFirestore()
 
     const dbQuery = doc(db, 'products', detailId)
-    
-    getDoc(dbQuery)
-      .then(resp => setProduct( { id:resp.id, ...resp.data() } ) )
 
-  }, [])
+    getDoc(dbQuery)
+      .then((resp) => {
+        !resp.data() && idNotFound("Id Not Found", { replace: true });
+        setProduct({...resp.data(), id:resp.id});
+      })
+      .catch((err) => consol.log(err));
+  }, [idNotFound])
 
   return (
     <div>
       <ItemDetail
-        product = {product}
+        product={product}
       />
-      <Link className="buttonVolver" to="/tienda">
-        <span>VOLVER</span>
+      <Link  to="/tienda">
+        <span className="buttonReturn">VOLVER</span>
       </Link>
     </div>
   );

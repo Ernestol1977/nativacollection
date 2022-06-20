@@ -4,13 +4,13 @@ import './CartWidget.css'
 
 const CartWidget = () => {
 
-    return (
-        <>
-            <Link to='/cart' >
-                <img src={ logo } alt="imagen" />
-            </Link>
-        </>
-    )
+  return (
+    <>
+      <Link to='/cart' >
+        <img src={logo} alt="imagen" />
+      </Link>
+    </>
+  )
 }
 
 export default CartWidget

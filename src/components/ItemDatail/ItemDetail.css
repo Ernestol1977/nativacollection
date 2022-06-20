@@ -1,15 +1,16 @@
 .itemDatail {
-    width: 80%;
     display: flex;
     justify-content: center;
     border: 1px solid #444;
     border-radius: 10px;
-    
 }
 
 .detailPhoto {
     border-radius: 5px;
     box-shadow: 2px 2px 8px #666;
+    width: 200px;
+    height: auto;
+    margin: 1em;
 }
 
 .detailName {

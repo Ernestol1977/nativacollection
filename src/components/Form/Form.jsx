@@ -25,7 +25,7 @@ const Forms = ()=> {
 
         <FormGroup controlId="formGridEmail">
           <FormLabel></FormLabel>
-          <input id="email" type="email" placeholder="Valide su email..." />
+          <input id="formEmailRepeat" type="email" placeholder="Valide su email..." />
         </FormGroup>
       </Row>
 

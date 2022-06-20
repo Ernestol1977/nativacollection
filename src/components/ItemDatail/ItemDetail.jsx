@@ -2,25 +2,41 @@
 import { useState } from "react";
 import { useCartContext } from "../../context/CartContext";
 import InputCart from "../InputCart/InputCart";
-import ItemCount from "../ItemCount/ItemCount"
+import ItemCount from "../ItemCount/ItemCount";
+
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+// import "./itemDetail.css"
 
 const ItemDetail = ({ product, onAdd }) => {
 
   const [inputType, setInputType ] = useState('button')
 
   const handleInter=()=>{
-      setInputType('other')
+    setInputType('other')
   }
   
-  const {addToCart, cartList} = useCartContext()
+  const {addToCart} = useCartContext()
+
+  function toastifyItem(text) {
+    toast.success(text, {
+      position: "top-center",
+      autoClose: 1500,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
+  }
 
   function onAdd (qty) {
-    alert(`${qty} items agregados al carrito`); 
+    
+    toastifyItem(`${qty} items agregados al carrito`); 
     addToCart ({...product, quantity:qty})
     handleInter()
   }
-
-  // console.log(cartList)
 
   return (
     <div className="itemDetail">
@@ -35,9 +51,10 @@ const ItemDetail = ({ product, onAdd }) => {
           inputType === 'button' ? 
             <ItemCount initial={1} stock={product.stock} onAdd={onAdd} handleInter={handleInter} />
             : 
-            <InputCart />
-        }
+            <InputCart /> 
+          }
       </div>
+      <ToastContainer />
     </div>
   );
 };

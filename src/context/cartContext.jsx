@@ -1,14 +1,18 @@
 import { addDoc, collection, doc, getDoc, getFirestore } from 'firebase/firestore';
 import { createContext, useContext, useState } from 'react'
 
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+
 const CartContext = createContext([]);
 
 export const useCartContext = () => useContext(CartContext)
 
 //Esto es un componente
 const cartContextProvider = ({ children }) => {
-  //Estados y funciones globales
 
+  //Estados y funciones globales
   const [cartList, setCartList] = useState([])
   const [product, setProduct] = useState({})
 
@@ -50,6 +54,45 @@ const cartContextProvider = ({ children }) => {
     setCartList([])
   }
 
+  function toastifyWarning(text, time) {
+    toast.warn(text, {
+      position: "top-center",
+      autoClose: time,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      className: "toastifyWarning",
+    });
+  }
+
+  function toastifyOk(text) {
+    toast.success(text, {
+      position: "top-center",
+      autoClose: 1000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      className: "toastifyOk",
+    });
+  }
+
+  function toastifyOrder(text) {
+    toast.success(text, {
+      position: "top-center",
+      autoClose: false,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      className: "toastifyOk",
+    });
+  }
+
   const purchaseOrder = (e) => {
     const inputFirst = document.getElementById("firstName").value;
 
@@ -75,6 +118,8 @@ const cartContextProvider = ({ children }) => {
       ) {
         e.preventDefault(e);
         let order = {};
+        
+        order.date = new Date();
 
         order.buyer = {
           name: inputFirst,
@@ -85,28 +130,33 @@ const cartContextProvider = ({ children }) => {
         };
 
         order.products =
-          cartList.map(cartProduct => {
-            const id = cartProduct.id
-            const name = cartProduct.name
-            const quantity = cartProduct.quantity
-            const price = cartProduct.price * cartProduct.quantity 
-
-            return { id, name, quantity, price };
-          });
-
+        cartList.map(cartProduct => {
+          const id = cartProduct.id
+          const name = cartProduct.name
+          const quantity = cartProduct.quantity
+          const price = cartProduct.price * cartProduct.quantity 
+          
+          return { id, name, quantity, price };
+        });
+        
         order.total = totalPrice();
 
         const db = getFirestore()
-        const queryCollection = collection(db, 'Orders');
+        const queryCollection = collection(db, 'orders');
         addDoc(queryCollection, order)
-          .then(resp => console.log(resp))
-          .catch(err => console.log(err))
-          .finally(() => alert("Completaste tu compra! Pronto te llegara un mail con tu número de orden"))
+        .then(toastifyOk("Completaste tu compra! Está siendo procesada..."))
+        .then((resp) => toastifyOrder(`Gracias por su compra! Su id de compra es: ${resp.id}. También le llegara a su email`), 5000)
+        .catch((err) => console.log(err))
+        .finally(() => {
+          setTimeout(() => {
+            window.location.href = "/";
+          }, 14000)
+        }); 
       }
 
     } 
     else {
-      alert("Revise su informacion")
+      toastifyWarning("Revise su informacion", 2500);
     }
   }
 
@@ -120,8 +170,10 @@ const cartContextProvider = ({ children }) => {
       totalPrice,
       product,
       findProduct,
-      purchaseOrder
+      purchaseOrder,
+      toastifyWarning
     }}>
+      <ToastContainer />
       {children}
     </CartContext.Provider>
   )

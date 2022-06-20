@@ -1,8 +1,9 @@
 import { useCartContext } from "../../context/CartContext"
 import { IoIosCloseCircle } from "react-icons/io"
-import { addDoc, collection, documentId, getDocs, getFirestore, query, where, writeBatch } from "firebase/firestore"
 import { Link } from "react-router-dom"
 import Forms from "../Form/Form"
+
+import "./Cart.css"
 
 
 const Cart = () => {
@@ -20,7 +21,6 @@ const Cart = () => {
         </div>)}
         <h3>El precio total es de: ${totalPrice() !== 0 && totalPrice()} </h3>
 
-
         <button onClick={vaciarCarrito}>Vaciar Carrito</button>
         <Forms />
       </div>
@@ -29,7 +29,7 @@ const Cart = () => {
     (
       <div>
         <h2>Sin productos en su carrito</h2>
-        <Link className="buttonVolver" to="./tienda">
+        <Link className="buttonReturn" to="./tienda">
           <span>VOLVER</span>
         </Link>
       </div>

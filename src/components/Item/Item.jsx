@@ -4,8 +4,8 @@ import "./Item.css";
 function Item({ name, id, photo, price, stock }) {
 
   return (
-    <div className="item">
-      <Link to={`/detalle/${id}`}>
+    <div>
+      <Link to={`/detalle/${id}`} className="itemAll">
         <img className="itemImg" src={photo} alt="" />
         <div className="itemInfo">
           <h3 className="itemTitle">{name}</h3>
