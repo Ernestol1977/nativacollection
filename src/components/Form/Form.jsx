@@ -15,16 +15,16 @@ const Forms = () => {
 
   return (
     <Form className="form">
-      <Row className="inputNombre">
+      <Row className="inputName">
         <Col>
           <input
-            className="inputNombre"
+            className="inputName"
             id="firstName"
             placeholder="Nombre completo"
           />
         </Col>
         <Col>
-          <input className="inputNombre" id="lastName" placeholder="Apellido" />
+          <input className="inputName" id="lastName" placeholder="Apellido" />
         </Col>
       </Row>
 

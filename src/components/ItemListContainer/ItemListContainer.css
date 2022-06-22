@@ -1,13 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Oleo+Script+Swash+Caps&family=Pacifico&family=Square+Peg&family=Tapestry&family=Yanone+Kaffeesatz&display=swap');
 
-/* font-family: 'Tapestry', cursive; */
-/* font-family: 'Pacifico', cursive; */
-/* font-family: 'Square Peg', cursive; */
-/* font-family: 'Oleo Script Swash Caps', cursive */
-/* font-family: 'Yanone Kaffeesatz', sans-serif; */
-
-/* font-family: 'Dancing Script', cursive; - Subtitulo (saludo)*/
-
 .saludo {
     font-size: 2em;
     font-family: 'Dancing Script', cursive;
