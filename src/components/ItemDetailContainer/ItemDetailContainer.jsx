@@ -11,24 +11,22 @@ function ItemDetailContainer() {
   const idNotFound = useNavigate();
 
   useEffect(() => {
-    const db = getFirestore()
+    const db = getFirestore();
 
-    const dbQuery = doc(db, 'products', detailId)
+    const dbQuery = doc(db, "products", detailId);
 
     getDoc(dbQuery)
       .then((resp) => {
         !resp.data() && idNotFound("Id Not Found", { replace: true });
-        setProduct({...resp.data(), id:resp.id});
+        setProduct({ ...resp.data(), id: resp.id });
       })
       .catch((err) => consol.log(err));
-  }, [idNotFound])
+  }, [idNotFound]);
 
   return (
-    <div>
-      <ItemDetail
-        product={product}
-      />
-      <Link  to="/tienda">
+    <div className="itemDetCont">
+      <ItemDetail product={product} />
+      <Link to="/tienda">
         <span className="buttonReturn">VOLVER</span>
       </Link>
     </div>
@@ -36,4 +34,3 @@ function ItemDetailContainer() {
 }
 
 export default ItemDetailContainer;
-

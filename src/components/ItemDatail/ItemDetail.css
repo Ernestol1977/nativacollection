@@ -1,32 +1,61 @@
-.itemDatail {
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=League+Gothic&family=Manrope&family=Poppins:wght@500&display=swap');
+
+.itemDetail {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     border: 1px solid #444;
     border-radius: 10px;
+    width: 90%;
+    height: 550px;
+    align-items: center;
+    margin: 2em auto 0 auto;
 }
 
 .detailPhoto {
     border-radius: 5px;
-    box-shadow: 2px 2px 8px #666;
-    width: 200px;
-    height: auto;
+    width: 50%;
+    max-height: auto;
     margin: 1em;
 }
 
+.imgDetail {
+    min-width: 40%;
+    height: auto;
+}
+
+.detailInfo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    padding: 1em;
+
+}
+
 .detailName {
-width: 40%;
-justify-content: start;
+    width: 40%;
+    justify-content: start;
+    font-family: 'Lato', sans-serif;
 }
 
 .detailPrice {
-width: 40%;
-justify-content: end;
-color: blue;
-font-weight: bold;
+    width: 40%;
+    justify-content: end;
+    color: gray;
+    font-weight: bold;
+    font-family: 'Lato', sans-serif;
+    font-size: 35px;
 }
 
 .detailDetail {
-    width: 80%;
-    font-style: italic;
-    text-align: justify;
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    font-size: 20px;
+   
+}
+
+.inputDiv{
+    width: 70%;
 }

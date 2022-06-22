@@ -1,12 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=League+Gothic&family=Manrope&family=Poppins:wght@500&display=swap');
+
+/* font-family: 'Tapestry', cursive; */
+/* font-family: 'Dancing Script', cursive; */
+/* font-family: 'Pacifico', cursive; */
+/* font-family: 'Square Peg', cursive; */
+
+/* font-family: 'Oleo Script Swash Caps', cursive - Title */
+/* font-family: 'Yanone Kaffeesatz', sans-serif; - navbar*/
+/* font-family: 'Lato', sans-serif;
+font-family: 'League Gothic', sans-serif;
+font-family: 'Manrope', sans-serif;
+font-family: 'Poppins', sans-serif; */
+
 .counterAll {
-    margin-top: 4em;
-    width: 75%;
-    background-color: rgb(72, 78, 76, 0.4);
+    width: 100%;
+    background-color: rgb(39, 39, 39);
     display: flex;
     flex-direction: column;
     align-items: center;
     align-content: center;
-    padding: 10px 0 0 0 ;
+    /* padding: 10px 0 0 0 ; */
     border-radius: 10px;
 }
 
@@ -15,26 +28,38 @@
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
-    gap: 2em;
+    gap: 3em;
+    margin-top: 1em;
 }
 
 .number {
     font-size: 1.5em;
-    font-weight: bold;
-    color: red;
-    text-shadow: 3px 3px 6px #444;
+    /* font-weight: bold; */
+    color: rgb(255, 255, 255);
+    font-family: 'Lato', sans-serif
+    /* text-shadow: 3px 3px 6px #444; */
 }
 
 
 .button {
-    border: none;
-    box-shadow: 2px 2px 2px  #666;
+    border-style: none;
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+border-radius: 7px;
+    width: 2em;
+    height: 2em;
+    align-items: center;
+    text-align: center;
+    /* box-shadow: 2px 2px 2px  #666; */
     
 }
 
 .buttonAddCart {
-    border: none;
-    box-shadow: 2px 2px 2px  #666;
+    border-style: none;
+    /* box-shadow: 2px 2px 2px  #666; */
     font-size: 1em;
+    padding: 0.5em 1em 0.5em 1em;
+    font-family: 'Lato', sans-serif;
+    border-radius: 10px;
 }
 

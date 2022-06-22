@@ -1,14 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=League+Gothic&family=Manrope&family=Poppins:wght@500&display=swap');
+
+/* font-family: 'Tapestry', cursive; */
+/* font-family: 'Dancing Script', cursive; */
+/* font-family: 'Pacifico', cursive; */
+/* font-family: 'Square Peg', cursive; */
+
+/* font-family: 'Oleo Script Swash Caps', cursive - Title */
+/* font-family: 'Yanone Kaffeesatz', sans-serif; - navbar*/
+/* font-family: 'Lato', sans-serif;
+font-family: 'League Gothic', sans-serif;
+font-family: 'Manrope', sans-serif;
+font-family: 'Poppins', sans-serif; */
+
+
+.item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .itemAll {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
+    align-items: center;
     border-radius: 20px;
+    text-decoration: none;
+    color: rgb(70, 67, 63);
+
 }
 
 .itemImg{
-    width: 200px;
-    height: auto;
+    width: auto;
+    height: 300px;
     margin: 1em;
 }
 
@@ -18,6 +42,9 @@
     align-items: center;
     justify-content: center;
     margin-top: 1em;
+    border-top: 1px gray solid;
+    padding: 1em;
+    font-family: 'Manrope', sans-serif
 }
 
 .itemTitle {
@@ -27,15 +54,39 @@
     font-weight: bold;
     font-family: sans-serif;
     margin-bottom: 0%;
-
+    text-decoration: none;
+    font-family: 'Manrope', sans-serif
 }
 
 .itemPrice{
     width: 50%;
-    border-left: 2px rgb(238, 0, 0) solid;
     text-align: center;
     font-size: 18px;
     font-weight: bold;
     font-family: sans-serif;
     margin-bottom: 0%;
+    font-family: 'Manrope', sans-serif
+}
+
+.itemAll:hover{
+    color: rgb(70, 67, 63);
+
+}
+
+.btn{
+    border-radius: 15px;
+    border: 1px gray solid;
+    background-color: gray;
+}
+
+.btn button{
+    border-radius: 15px;
+    border: 1px gray solid;
+    background-color: rgb(24, 24, 24);
+    padding: 0.5em 1em 0.5em 1em;
+    color: aliceblue;
+}
+
+.btn button:hover{
+    transform: scale(1.02);
 }

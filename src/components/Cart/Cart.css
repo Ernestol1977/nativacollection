@@ -1,2 +1,91 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=League+Gothic&family=Manrope&family=Poppins:wght@500&display=swap');
 
+/* font-family: 'Tapestry', cursive; */
+/* font-family: 'Dancing Script', cursive; */
+/* font-family: 'Pacifico', cursive; */
+/* font-family: 'Square Peg', cursive; */
+
+/* font-family: 'Oleo Script Swash Caps', cursive - Title */
+/* font-family: 'Yanone Kaffeesatz', sans-serif; - navbar*/
+/* font-family: 'Lato', sans-serif;
+font-family: 'League Gothic', sans-serif;
+font-family: 'Manrope', sans-serif;
+font-family: 'Poppins', sans-serif; */
+
+.cartView {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 2em;
+}
+
+.liItem {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    width: 90%;
+}
+.liItem li{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 1em;
+    font-family: 'Lato', sans-serif;
+    
+}
+.liItem img{
+    width: 6em;
+    height: auto;
+}
+
+.precioTotal{
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+
+}
+
+.liItem .btnRemove {
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: 100%;
+    background-color: black;
+    color: aliceblue;
+    font-size: 13px;
+    text-align: center;
+    padding: 0.2em;
+}
+
+.liItem .btnRemove:hover{
+    background-color: aliceblue;
+    color: black;
+}
+
+.cartDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    width: 50%;
+    height: 300px;
+}
+
+.cartDiv button {
+    width: 50%;
+    background-color: black;
+    color: aliceblue;
+    border-radius: 15px;
+    font-family: 'Lato', sans-serif
+}
+
+.cartDiv button:hover{
+    background-color: aliceblue;
+    color: black;
+}
+
+.divForm {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}

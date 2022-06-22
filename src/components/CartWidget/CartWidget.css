@@ -1,6 +1,13 @@
 img {
     width: 2em;
     height: 2em;
-    margin-right: 20px;
+    /* margin-right: 20px; */
     border-radius: 2px;
+}
+
+.widget{
+    margin-left: 3em;
+    text-decoration: none;
+    color: black;
+    
 }

@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700&family=League+Gothic&family=Manrope&family=Poppins:wght@500&display=swap');
+
+/* font-family: 'Tapestry', cursive; */
+/* font-family: 'Dancing Script', cursive; */
+/* font-family: 'Pacifico', cursive; */
+/* font-family: 'Square Peg', cursive; */
+
+/* font-family: 'Oleo Script Swash Caps', cursive - Title */
+/* font-family: 'Yanone Kaffeesatz', sans-serif; - navbar*/
+/* font-family: 'Lato', sans-serif;
+font-family: 'League Gothic', sans-serif;
+font-family: 'Manrope', sans-serif;
+font-family: 'Poppins', sans-serif; */
+
+.btnCarrito{
+    padding: 0.5em 1.5em 0.5em 1.5em;
+    border-radius: 10px;
+    font-family: 'Lato', sans-serif;
+    border: 1px rgb(39, 38, 38) solid;
+}
+
+.btnCarrito:hover{
+    background-color: rgb(39, 38, 38);
+    color: aliceblue;
+}
+
+.btnComprar{
+    padding: 0.5em 1.5em 0.5em 1.5em;
+    border-radius: 10px;
+    font-family: 'Lato', sans-serif;
+    background-color: rgb(39, 38, 38);
+    color: aliceblue;
+    border-style: none;
+    margin-left: 2em;
+}
+
+.btnComprar:hover{
+    background-color: aliceblue;
+    color:rgb(39, 38, 38) ;
+    border: 1px rgb(39, 38, 38) solid;
+
+}
